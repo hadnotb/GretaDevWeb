@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <form class = "Form" id="form-generate" action="index.php" method="POST">
+        <input type="hidden" name="action" value="generate">
+        <div>
+            <label for="size-select">Taille</label>
+            <select name="size" id="size-select">
+                <?php for ($i =1 ; $i<=10; $i++):?>
+                    <option <?=$i == $size? 'selected' : '';?> value="<?=$i?>"><?=$i?></option>
+                <?php endfor; ?>
+            </select>
+        </div>
+        <div>
+            <label for="color-select">Nombre de Couleurs</label>
+            <select name="color" id="color-select">
+                    <?php for ($i =1 ; $i<=10; $i++):?>
+                        <option <?=$i == $nbColor? 'selected' : '';?> value="<?=$i?>"><?=$i?></option>
+                    <?php endfor; ?>           
+            </select>
+        </div>
+        <div>
+            <input type="radio" id="vertical" name="symetrie" value="vertical" <?=$symetry == 'vertical'? 'checked':''; ?>>
+            <label for="vertical">Symétrie Vertical</label>
+            <input type="radio" id="horizontal" name="symetrie" value="horizontal"<?=$symetry == 'horizontal'? 'checked':''; ?>>
+            <label for="horizontal">Symétrie Horizontale</label>
+        </div>
+                
+        <button type="submit" class="submit-button" id="submit-button-generate">Generer</button>
+    </form>
+    <?php echo $svg?>
+    <form action="index.php" method="POST">
+        <input type='hidden' name ="svg" value="<?= htmlspecialchars($svg) ?>">
+        <input type="submit" value="Enregister">
+        <input type="hidden" name ="action" value='save'>
+        <input type="hidden" name="size" value="<?=$size;?>">
+        <input type="hidden" name="color" value="<?=$nbColor;?>">
+    </form>
+    <form action="index.php" method="POST">
+        <input type='hidden' name ="download" value="<?= htmlspecialchars($svg) ?>">
+        <input type="submit" value="Telecharger">
+        <input type="hidden" name ="action" value='download'>
+      
+    </form>
+<script src="/js/app.js"></script>    
+</body>
+</html>

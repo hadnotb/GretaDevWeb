@@ -1,0 +1,24 @@
+
+<svg class="avatar" viewbox ="0 0 4 4">
+    
+                        <rect class ="rectangle" x ="0" y="0" width="1" height="1" fill="#a0ba4a"/>
+                    <rect class ="rectangle" x ="3" y="0" width="1" height="1" fill="#a0ba4a"/>
+                    <rect class ="rectangle" x ="1" y="0" width="1" height="1" fill="#750d5a"/>
+                    <rect class ="rectangle" x ="2" y="0" width="1" height="1" fill="#750d5a"/>
+            
+                        <rect class ="rectangle" x ="0" y="1" width="1" height="1" fill="#a0ba4a"/>
+                    <rect class ="rectangle" x ="3" y="1" width="1" height="1" fill="#a0ba4a"/>
+                    <rect class ="rectangle" x ="1" y="1" width="1" height="1" fill="#f9d312"/>
+                    <rect class ="rectangle" x ="2" y="1" width="1" height="1" fill="#f9d312"/>
+            
+                        <rect class ="rectangle" x ="0" y="2" width="1" height="1" fill="#f9d312"/>
+                    <rect class ="rectangle" x ="3" y="2" width="1" height="1" fill="#f9d312"/>
+                    <rect class ="rectangle" x ="1" y="2" width="1" height="1" fill="#69dea2"/>
+                    <rect class ="rectangle" x ="2" y="2" width="1" height="1" fill="#69dea2"/>
+            
+                        <rect class ="rectangle" x ="0" y="3" width="1" height="1" fill="#16aa02"/>
+                    <rect class ="rectangle" x ="3" y="3" width="1" height="1" fill="#16aa02"/>
+                    <rect class ="rectangle" x ="1" y="3" width="1" height="1" fill="#a0ba4a"/>
+                    <rect class ="rectangle" x ="2" y="3" width="1" height="1" fill="#a0ba4a"/>
+            
+    </svg>

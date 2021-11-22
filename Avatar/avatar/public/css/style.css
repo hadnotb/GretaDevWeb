@@ -1,0 +1,16 @@
+body{
+
+    background-color: grey;
+}
+
+
+.avatar{
+    
+    width: 650px;
+    height: 650px;
+    
+}
+.rectangle{
+    border-radius: 5%;
+    border: 2px solid black;
+}

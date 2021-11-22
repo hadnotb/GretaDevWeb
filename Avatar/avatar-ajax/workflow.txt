@@ -1,0 +1,11 @@
+3°) Envoyer la requête AJAX : 
+- vers le fichier ajax.php
+- avec la méthode POST
+- en transmettant les données du formulaire dans le corps (body) de la requête
+On utilisera la méthode fetch(), qui utilise les promesses, et la classe FormData pour les données du formulaire 
+
+4°) Côté serveur dans le fichier ajax.php, on va générer uniquement le code source d'un nouvel avatar
+Et renvoyer ce code source au client !
+
+5°) Le client récupère la réponse du serveur à la requête AJAX, c'est-à-dire le code source SVG de l'avatar
+Il ne reste plus qu'à remplacer le code SVG de l'ancien avatar par le nouveau !

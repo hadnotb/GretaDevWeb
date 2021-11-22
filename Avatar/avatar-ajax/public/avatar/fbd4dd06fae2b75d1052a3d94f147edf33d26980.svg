@@ -1,0 +1,23 @@
+<svg class="svg-html" id='Avatar' viewBox ="0 0 4 4" width ="550px" height="550px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    
+                        <rect class ="rectangle" x ="0" y="0" width="1" height="1" fill="#841ba1"/>
+                    <rect class ="rectangle" x ="1" y="0" width="1" height="1" fill="#235fe5"/>
+                    <rect class ="rectangle" x ="2" y="0" width="1" height="1" fill="#841ba1"/>
+                    <rect class ="rectangle" x ="3" y="0" width="1" height="1" fill="#235fe5"/>
+            
+                        <rect class ="rectangle" x ="0" y="3" width="1" height="1" fill="#841ba1"/>
+                    <rect class ="rectangle" x ="1" y="3" width="1" height="1" fill="#235fe5"/>
+                    <rect class ="rectangle" x ="2" y="3" width="1" height="1" fill="#841ba1"/>
+                    <rect class ="rectangle" x ="3" y="3" width="1" height="1" fill="#841ba1"/>
+            
+                        <rect class ="rectangle" x ="0" y="2" width="1" height="1" fill="#235fe5"/>
+                    <rect class ="rectangle" x ="1" y="2" width="1" height="1" fill="#841ba1"/>
+                    <rect class ="rectangle" x ="2" y="2" width="1" height="1" fill="#235fe5"/>
+                    <rect class ="rectangle" x ="3" y="2" width="1" height="1" fill="#235fe5"/>
+            
+                        <rect class ="rectangle" x ="0" y="1" width="1" height="1" fill="#841ba1"/>
+                    <rect class ="rectangle" x ="1" y="1" width="1" height="1" fill="#235fe5"/>
+                    <rect class ="rectangle" x ="2" y="1" width="1" height="1" fill="#841ba1"/>
+                    <rect class ="rectangle" x ="3" y="1" width="1" height="1" fill="#841ba1"/>
+            
+    </svg>
