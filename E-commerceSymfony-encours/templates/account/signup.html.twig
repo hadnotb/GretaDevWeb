@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ parent() }} - Creation de compte {% endblock %}
+
+{% block body %}
+
+    <h2>Creez votre compte</h2>
+
+  
+    {{form_start(userForm)}}
+        {{ form_widget(userForm)}} 
+        <input class="submit" type="submit"  value="S'inscire'"> 
+        <input class="svg" type="hidden" name ="svg" value ="{{svg}}">
+    {{form_end(userForm)}}
+
+    {{form_start(userForm)}}
+        {{ form_widget(userForm)}} 
+        <input class="submit" type="submit"  value="S'inscire'"> 
+        <input class="svg" type="hidden" name ="svg" value ="{{svg}}">
+    {{form_end(userForm)}}
+
+    <div class="Avatar-container">
+        <div id="Avatar">{{svg|raw }}</div>
+    </div>
+
+
+{% endblock %}

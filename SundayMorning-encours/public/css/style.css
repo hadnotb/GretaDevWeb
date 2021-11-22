@@ -1,0 +1,473 @@
+@font-face {
+  font-family: "Apercu";
+  src: url("font/apercu/apercu_regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Apercu";
+  src: url("font/apercu/apercu_bold.ttf") format("truetype");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Apercu";
+  src: url("font/apercu/apercu_regular_italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+input {
+  border: solid black 1px;
+}
+
+body {
+  margin: auto;
+  font-family: "Apercu";
+  font-weight: 400;
+  color: black;
+}
+
+.Layout {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Category-titles-link {
+  color: black;
+  text-decoration: none;
+}
+
+.SiteHeader {
+  margin: 0;
+  padding: 1em;
+  background-color: #FFE542;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.SiteHeader-user {
+  text-decoration: none;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  color: black;
+}
+.SiteHeader-logo-svg {
+  margin: auto;
+}
+.SiteHeader-nav-link {
+  text-decoration: none;
+  line-height: 25px;
+}
+
+.fab {
+  color: black;
+}
+
+#MenuBars {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+#MenuBars:hover {
+  color: red;
+}
+#MenuBars:visited {
+  color: black;
+}
+
+#MenuLink {
+  display: none;
+  text-align: center;
+  color: black;
+}
+#MenuLink:visited {
+  color: black;
+}
+
+#MenuLink:hover {
+  background-color: #ffed77;
+}
+
+#MenuClose {
+  display: none;
+  text-align: center;
+}
+#MenuClose:visited {
+  color: black;
+}
+
+.Article-mainPic {
+  width: 100%;
+  margin: auto;
+}
+.Article-mainPic-img {
+  width: 100%;
+}
+.Article-vigPic {
+  margin: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+.Article-vigPic-img {
+  width: 100%;
+}
+
+.css-label {
+  cursor: pointer;
+}
+
+.css-checkbox {
+  display: none;
+}
+
+.Minus {
+  display: none;
+}
+
+.css-checkbox:checked + .css-label .Minus {
+  display: inline-block;
+}
+
+.css-checkbox:checked + .css-label .Plus {
+  display: none;
+}
+
+.inputList {
+  display: none;
+}
+
+.css-checkbox:checked ~ .inputList {
+  display: block;
+}
+
+#submit-search {
+  display: none;
+}
+
+.button-search {
+  background: none;
+  border: none;
+}
+
+.search-bar, .button-search {
+  vertical-align: middle;
+}
+
+.search-bar {
+  display: none;
+}
+
+.not-hidden {
+  display: inline;
+}
+
+.fa-search {
+  font-size: 16px;
+}
+
+.Category-titles-h3-link {
+  text-decoration: none;
+  color: black;
+}
+
+.slider {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.img-div {
+  width: 300px;
+  height: 300px;
+  margin: 0 15px;
+}
+
+.slick-next {
+  background: black;
+  width: 50px;
+}
+
+.slick-prev {
+  background: #000;
+  width: 50px;
+}
+
+.slider-forYou {
+  max-width: 250px;
+  height: 400px;
+}
+
+#boutonTrier {
+  font-family: "Apercu";
+  font-weight: 400;
+  background-color: black;
+  color: white;
+  border-radius: 15px 15px 15px 15px;
+  margin-top: 5px;
+  display: block;
+  width: 75px;
+  margin-right: auto;
+  margin-left: auto;
+  border: none;
+}
+
+.Category {
+  display: none;
+}
+
+.showCategory {
+  display: block;
+  text-align: center;
+}
+
+.Product-figure {
+  box-sizing: border-box;
+  width: 10em;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+.Product-figure-img {
+  border: solid black;
+  max-width: 100%;
+  height: auto;
+  margin-right: 1px;
+  position: relative;
+}
+.Product-figure-link {
+  position: absolute;
+  width: 100%;
+  background-color: black;
+}
+.Product-figure-info {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  margin-left: 1px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.Product-figure-info-titre {
+  font-size: small;
+}
+.Product-figure-info-marque {
+  font-size: small;
+  order: 3;
+}
+.Product-figure-info-prix {
+  font-size: medium;
+}
+
+.SiteFooter {
+  background-color: #FFE542;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.NewsLetterForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.PageLogin {
+  background-color: #FFE542;
+  margin: 1em 0 1em;
+  padding: 5%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Connect-form, .Form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+}
+
+.Form-field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+.Form-field-content {
+  border-radius: 15px;
+  box-shadow: 1px 1px 1px #555;
+  min-width: 200px;
+  padding: 5px;
+}
+.Form-field-more {
+  font-size: x-small;
+  color: black;
+  text-decoration: none;
+}
+
+.Form-submit {
+  border-radius: 15px;
+  padding: 5px;
+  background-color: black;
+  color: #FFE542;
+  font-size: medium;
+  width: 150px;
+  margin: 5px;
+  transition: all 0.3s ease-out;
+}
+
+.Form-submit:hover {
+  transform: scale(1.1);
+}
+
+#facebookButton, #googleButton {
+  border: solid 1px black;
+  background-color: #FFE542;
+  border-radius: 15px;
+  padding: 5px;
+  box-shadow: 1px 1px 1px #555;
+  margin: 5px;
+  color: black;
+  transition: all 0.3s ease-out;
+}
+
+#facebookButton:hover, #googleButton:hover {
+  transform: scale(1.1);
+}
+
+.Log-signIn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Log-signIn-button-a:link, .Log-signIn-button-a:visited {
+  text-align: center;
+  border-radius: 15px;
+  padding: 5px;
+  background-color: black;
+  width: 150px;
+  text-decoration: none;
+  color: #FFE542;
+  transition: all 0.3s ease-out;
+}
+.Log-signIn-button-a:hover {
+  transform: scale(1.1);
+}
+
+.PageSignup {
+  background-color: #FFE542;
+  margin: 1em 0 1em;
+  padding: 5%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 600px) {
+  #MenuBars, #MenuClose {
+    display: none;
+  }
+
+  #MenuLink {
+    display: inline-block;
+  }
+
+  .SiteHeader {
+    background-image: url("../img/julia-borges-bckgrnd.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    max-height: 50%;
+    padding: 0;
+  }
+  .SiteHeader-user {
+    width: 95%;
+    max-width: 1400px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .SiteHeader-logo-svg {
+    text-align: center;
+    width: 500px;
+  }
+  .SiteHeader-logo-svg path {
+    fill: white;
+  }
+  .SiteHeader-menu {
+    width: 100%;
+    background-color: #FFE542;
+  }
+  .SiteHeader-nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1400px;
+  }
+
+  section.SiteHeader-user > a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .fab {
+    color: white;
+  }
+
+  .fas {
+    color: black;
+  }
+
+  .Article {
+    display: grid;
+    grid-template-columns: 1fr 4fr 4fr;
+  }
+  .Article-vigPic {
+    display: flex;
+    flex-direction: column;
+    order: -1;
+  }
+
+  .Product {
+    display: unset;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10%;
+  }
+}
+@media screen and (min-width: 768px) {
+  #boutonTrier {
+    display: none;
+  }
+
+  .Category {
+    display: block;
+  }
+
+  .PageCategory {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .Category {
+    width: 25%;
+  }
+
+  .Product {
+    width: 75%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 5%;
+  }
+}/*# sourceMappingURL=style.css.map */

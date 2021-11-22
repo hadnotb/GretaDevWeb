@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+{% block title %} {{ parent() }} - Accueil {% endblock %}
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+{% endblock %}
+
+
+{% block body %}
+
+
+    
+    {% for products in productByCat %}
+                
+                <article class="SiteMain-article">
+                    <h2 class="SiteMain-article-title">{{products.name}} <h3>{{products.price}}</h3></h2>
+                    <img src="{{products.thumbnail}}" alt="">
+                    <a href="{{ path('product_show', {'slug': products.slug }) }}">Voir plus</a>
+                    
+                </article>
+                    
+    {% endfor %}
+
+    
+
+{% endblock %}

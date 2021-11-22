@@ -1,0 +1,144 @@
+
+.SiteHeader{
+
+    &-bgLogo{
+        width: 100%;
+        text-align: center;
+        margin: 30px;
+        
+    }
+    &-nav{
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        min-height: 70px;
+        &-link{
+            text-decoration: none;
+            color: black;
+            &:hover{
+                color:yellow
+            }
+        }
+        
+    }
+}
+.SiteMainContent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    &-article{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+        
+    }
+}
+.form{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    
+}
+#review>*{
+    padding: 5px;
+}
+#review>div>label{
+    padding-right: 5px;
+}
+#review>div>ul{
+    position: absolute;
+    width: 180px;
+    
+    
+}
+#review>div>ul>li{
+    position: absolute;
+    top: -50px;
+    left: 299px;
+    
+    width: 100%;
+    background-color: red;
+    color:black;
+    border-radius: 5px;
+    padding: 5px;
+   
+    
+}
+.categoryList{
+    
+    display:none;
+    position:absolute;
+    top:62px;
+    right: 20px;
+    background-color: yellow;
+    padding: 30px;
+    &>a{
+        text-decoration: none;
+        color: black;
+        padding: 5px;
+        &:hover{
+            transform :scale(1.2);
+        }
+    }
+    
+
+    &::before{
+        content :'';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: yellow;
+        top: -10px;
+        left:10px;
+        transform: rotate(45deg);
+        
+    }
+}
+#review_nickname{
+    margin-left: 41px;
+}
+#review_grade{
+    margin-left:61px
+}
+.review-button{
+    margin: 0 auto;
+}
+.Article{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    max-width: 400px;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 15px;
+    background: rgb(240,255,110);
+    background-image: linear-gradient( 135deg, #FD6E6A 10%, #FFC600 100%);
+}
+
+.hidden{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.Avatar-container{
+    width: 250px;
+}
+.baneer-avatar{
+
+    width: 80px;
+    position: relative;
+    top: -5px;
+}
+.banneer-userContainer{
+    position:absolute;
+    top: -90px;
+    right: 10px;
+}
+
+

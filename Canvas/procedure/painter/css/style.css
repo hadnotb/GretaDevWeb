@@ -1,0 +1,60 @@
+body{
+    background-color: brown;
+    margin: 0;
+    padding:0;
+    font-family: 'Permanent Marker', cursive;
+}
+#title{
+    text-align: center;
+}
+main>h2{
+    text-align: center;
+}
+#canvas{
+    display: block;
+    margin: 0 auto;
+    background-color: white;
+}
+#color-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 400px;
+    margin: 0 auto;
+   
+    
+
+}
+#gomme1{
+    font-size: 25px;
+}
+#gomme2{
+    font-size: 55px;
+}
+#gomme3{
+    font-size: 85px;
+}
+#color-green{
+    background-color: green;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+#color-red{
+    background-color: red;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+#color-yellow{
+    background-color: yellow;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+#color-pink{
+    background-color: pink;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}

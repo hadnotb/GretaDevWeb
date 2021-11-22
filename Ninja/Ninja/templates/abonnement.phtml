@@ -1,0 +1,19 @@
+<form class="signup-form" action="<?=buildUrl('abonnement');?>" method="POST">
+    <fieldset>
+        <legend>Abonnez vous</legend>
+       
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" value="<?=$email;?>">
+            <label for="origins">Faite votre choix</label>
+            
+            <select name="origins" id="origins">
+           
+                <?php foreach ($origins as $origin): ?>
+                    <option value="<?=$origin['id_origin'];?>"><?=$origin['origin_label'];?></option>
+                <?php endforeach; ?>
+            </select> 
+    
+            <input type="submit" value="Enregistrer">
+    </fieldset>
+
+</form>

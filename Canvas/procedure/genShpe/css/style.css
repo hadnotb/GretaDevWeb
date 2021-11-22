@@ -1,0 +1,12 @@
+body{
+    margin: 0;
+    padding:0;
+    font-family: 'Permanent Marker', cursive;
+}
+#title{
+    margin: 0;
+    background-color: rgb(54, 50, 50);
+    color : rgb(100, 241, 44);
+    text-align: center;
+
+}

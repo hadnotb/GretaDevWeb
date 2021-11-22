@@ -1,0 +1,49 @@
+<section class="NewCollection">
+    <div class="NewCollection-pictures">
+        <figure class="NewCollection-pictures-fig">
+            <img class="NewCollection-pictures-fig-img" src="" alt="">
+        </figure>
+    </div>
+    <div class="NewCollection-product">
+    <button type="button" class="slick-prev">Previous</button>
+    <div class="slider">
+        <div class="img-div div1">
+            <img src="img/a.jpg" alt=""> 
+        </div>
+        <div class="img-div div2">
+            <img src="img/b.jpg" alt="">
+        </div>
+        <div class="img-div div3">
+            <img src="img/c.jpg" alt="">
+        </div>
+    </div>
+    <button type="button" class="slick-next">Next</button> 
+</section>
+
+<section class="HomeNav">
+    <a class="HomeNav-link" id="Infosboutique" href="">Infos sur la boutique</a>
+    <a class="HomeNav-link" id="Eshop" href="">E-shop</a>
+    <a class="HomeNav-link" id="Promo" href="">Promotions</a>
+</section>
+
+<section class="ForYou">
+    <h2 class="ForYou-title">Pourrait vous plaire</h2>
+    <svg>Barre du dessous</svg>
+    <div class="ForYou-Carroussel">
+    <button type="button" class="slick-prev-fy">Previous</button>    
+    <div class="slider-forYou">
+    <?php if ($articles): ?>
+                <?php foreach ($articles as $product): ?>
+                    <figure class="Product-figure">
+                        <img class="Product-figure-img" src="<?php echo(IMAGE_URL . '/' . $product["img"]); ?>" alt="">
+                            <a href=""></a>
+                        </img>
+                        
+                    </figure>
+                <?php endforeach; ?>
+
+            
+            <?php endif; ?>
+    </div>
+    
+</section>

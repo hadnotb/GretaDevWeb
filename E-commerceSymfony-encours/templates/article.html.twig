@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+{% block title %} {{ parent() }} - Accueil {% endblock %}
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+
+
+    <article class="Article">
+        <h2 class="Article-title">{{product.name}}</h2>
+        <img src="{{product.thumbnail}}" alt="" class="Article-img">
+        <p class='Article-desc'>{{product.description}}</p>
+        <small class='Article-desc'>{{product.createdAt|date('d/m/Y')}}</small>
+        <small class='Article-desc'>{{product.price}}</small>
+        <small class='Article-desc'>{{product.category.name}}</small>
+        
+        {% if app.user %}
+            <div class="form">
+                {{ form_start(form,{'attr': {'class':'form-content','novalidate': 'novalidate'}})}}
+                {{ form_widget(form)}}
+                <button class="review-button" type="submit"><i class="fas fa-redo"></i> Sous-mettre</button>
+                {{ form_end(form)}}
+            </div>
+        {% endif %}
+    </article>
+    
+        {% for revs in rev %}
+                <h3> {{revs.nickname}} : {{revs.grade}}</h3> 
+                <p>{{revs.content}}</p>
+                <small>{{revs.createdAt|date('d/m/Y')}}</small>
+        {% endfor %}
+    
+    
+    {% for type,messages in app.flashes %}
+
+        {% for message in messages %}
+            <p class =''> {{message}}</p> 
+        {% endfor %}
+            
+    {% endfor %}
+
+{% endblock %}

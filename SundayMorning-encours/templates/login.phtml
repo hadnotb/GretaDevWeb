@@ -1,0 +1,43 @@
+<Section class="PageLogin"> 
+    <!-- class="PageLogin" -->
+    
+    <div class="Log-connect Connect">
+        
+        <div class="Connect-form">
+            
+            <form action="<?=buildUrl('login');?>" method="POST" class="Form">
+            
+                <h2>Connectez-vous
+                </h2>
+                <div class="Form-field">
+                    
+                    <label class ="Form-field-label" for="mail">Adresse mail</label>
+                    
+                    <input  class ="Form-field-content" type="email" name="email" id="email" required>
+                    
+                </div>
+
+                <div class="Form-field">
+                    
+                    <label class="Form-field-label" for="password">Mot de passe</label>
+                    
+                    <input class="Form-field-content" type="password" name="password" id="password">
+                    
+                    <a class="Form-field-more" href="">Mot de passe oublié</a>
+                    
+                </div>
+
+                <input class ="Form-submit" type="submit" value="Connectez-vous">
+                
+            </form>
+            <button id="facebookButton" class="fab fa-google"><i> Connect with gogole</i></button>
+            <button id="googleButton" class="fab fa-facebook"><i> Connect with fakebook</i></button>
+        </div>  
+    </div>
+    <div class="Log-signIn">
+        <p>Vous n'avez pas encore de compte ?</p>
+        
+        <a class="Log-signIn-button-a" href="">Creer un compte !</a> 
+        
+    </div>
+</Section>

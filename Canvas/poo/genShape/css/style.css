@@ -1,0 +1,25 @@
+body{
+    margin: 0;
+    padding:0;
+    font-family: 'Permanent Marker', cursive;
+    
+}
+#canva-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#title{
+    margin: 0;
+    background-color: rgb(31, 0, 102);
+    color : rgb(100, 241, 44);
+    text-align: center;
+
+}
+#canvas1{
+
+    background-color: rgb(31, 0, 102);
+    
+    
+
+}

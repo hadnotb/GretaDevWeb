@@ -1,0 +1,24 @@
+        <a id="MenuBars" href="#" class="SiteHeader-bars"><i class="fas fa-bars"></i></a>    
+        <nav id="Menu" class = 'SiteHeader-nav'>
+            
+            <a id="MenuLink" href="#" class="SiteHeader-nav-link">Nouveautés </a>
+            <a id="MenuLink"href="#" class="SiteHeader-nav-link">Marques</a>
+            <a id="MenuLink" href="#" class="SiteHeader-nav-link">Promos</a>
+            <a id="MenuLinkCategorie" href="#" class="SiteHeader-nav-link">Categorie</a>
+           <div id='categoryList' class ='categoryList'>
+            {% for catName in categoryRepository.findAll %}
+                    <a class='categoryLinks'href="{{ path('category_show', {'slug': catName.name }) }}">{{catName.name}}</a> 
+            {% endfor %}
+            </div>
+            {% if app.user %}
+                <a class="SiteHeader-nav-link" href="{{ path('security_logout') }}"><i class="fas fa-sign-out-alt"></i> Deconnexion</a>
+            {% else %}
+                <a class="SiteHeader-nav-link" href="{{ path('security_login') }}"><i class="fas fa-sign-in-alt"></i> Connexion</a>
+            {% endif %}
+            {% if app.user %}
+            <div class ='banneer-userContainer'>
+                <small class="baneer-fullname"><i class="fas fa-user-circle"></i> Vous êtes en ligne {{app.user.fullName}}</small>
+                <img class ='baneer-avatar'src="/avatars/{{app.user.svg}}" alt="">
+            </div>
+            {% endif %}
+        </nav>

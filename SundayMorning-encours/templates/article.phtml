@@ -1,0 +1,43 @@
+<main class="MainContent">
+    <section class="MainContent-article Article">
+
+            <figure class="Article-mainPic">
+                <img class="Article-mainPic-img" src="<?php echo(IMAGE_URL . '/' . $images[0]); ?>" alt="">
+            </figure>
+
+            <figure class="Article-vigPic">
+                <?php foreach($images as $image):?>
+                    <img src="<?php echo(IMAGE_URL . '/' . $image); ?>" alt="" class="Article-vigPic-img">
+                <?php endforeach ?>
+            </figure>
+
+            <section class="Article-info">
+
+                <h1 class="Article-info-nomModel"><?=$article['libArticle']?></h1>
+
+                <div class="Article-info-couleur">
+                    <h2 class="Article-info-couleur-h2">Couleur</h2>
+                    <div class='Articke-info-couleur-vignette'>
+                        <!-- Est ce que ce sont des images ? on doit renvoyer l'information de la couleur soit pour changer l'image de la photo soit pour commander l'article dans la bonne couleur -->
+                        <a href=""></a><a href=""></a><a href=""></a><a href=""></a>
+                    </div>
+                </div>
+
+                <div class="Article-info-taille">
+                    <h2 class="Article-info-taille-h2">Taille</h2>
+                    <div class="Article-info-taille">
+                        <!-- Meme question on doit renvoyer l'info quel balise utilisé ? je peux également récup le lib de la taille en bdd et lui mettre un border-->
+                    </div>
+                </div>
+
+                <div class="Article-info-description">
+                    <h2 class="Article-info-description-h2">Description</h2>
+                    <p><?=$article['details']?></p>
+                </div>
+
+                <Button class="Article-info-bouton">Ajouter au panier</Button>
+
+            </section>
+
+    </section>
+</main>
