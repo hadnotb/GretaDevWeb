@@ -1,0 +1,71 @@
+// COLORS
+$firstColor1:#5A9FF6;
+$firstColor2: rgba(95, 188, 250, 0.808);
+$secondColor1:#8BF09F;
+$secondColor2: #bcf5c7;
+$altColor1:rgb(255, 166, 0);
+$altColor2:rgb(255, 201, 102);
+$textColor:#333;
+$bgColor:black;
+$bgColorLight:rgb(27, 31, 32);
+$bgColorUltraLight:rgb(221, 221, 221);
+$defonceColor:white;
+$transparentColor:transparent;
+
+// POSITIONNEMENT FLEX
+@mixin XYcenteredBlock{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin XYcenteredFullHeightBlock{
+    @include XYcenteredBlock;
+    min-height: 100vh;
+}
+
+// Gestion overlay
+@mixin overlayParent{
+    content: "";
+    position:absolute;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    z-index:0;
+}
+@mixin overlayChild{
+    position:relative;
+    z-index:10;
+}
+@mixin overlayReset{
+    position:static;
+}
+
+//animations
+@keyframes menuItemAppear{
+    0% {
+        transform:translateX(100%);
+        opacity:0;
+    } 
+    100%{
+        transform:translateX(0);
+        opacity:1;
+    }
+
+}
+
+@keyframes menuAppear{
+    0%{
+        opacity:0;
+        animation-timing-function:ease-out
+    }
+    80%{
+        transform : translateY(40px);
+        animation-timing-function:ease-in
+
+    }
+    100%{
+        opacity: 1;
+        transform : translateY(15px);
+    }
+}

@@ -1,0 +1,105 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  font-family: Poppins, sans-serif;
+}
+
+.Container {
+  background: linear-gradient(-45deg, #ece74e, #8FB244);
+  border-radius: 50px;
+  position: relative;
+  padding: 3em;
+  max-width: 400px;
+  -webkit-transition: .5s ease-out;
+  transition: .5s ease-out;
+}
+
+.Container-content {
+  color: white;
+  opacity: 0;
+  -webkit-transition: .3s ease-out .4s;
+  transition: .3s ease-out .4s;
+}
+
+.Container-content-h2 {
+  font-size: 3em;
+}
+
+.Container-content-text-link:link {
+  display: inline-block;
+  padding: .7em;
+  background-color: #ffffff;
+  color: #8FB244;
+  border-radius: 20px;
+  text-decoration: none;
+  -webkit-transition: .3s .1s;
+  transition: .3s .1s;
+}
+
+.Container-content-text-link:hover {
+  background-color: #8FB244;
+  color: #ffffff;
+}
+
+.Container-figure {
+  position: absolute;
+  bottom: 0px;
+  margin: 0;
+  padding: 0;
+  -webkit-transform-origin: center bottom;
+          transform-origin: center bottom;
+  -webkit-transform: translateY(15px) scale(1) rotateZ(5deg);
+          transform: translateY(15px) scale(1) rotateZ(5deg);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.Container:hover {
+  padding-bottom: 400px;
+}
+
+.Container:hover .Container-content {
+  opacity: 1;
+}
+
+.Container:hover .Container-figure {
+  -webkit-transform: translateY(15px) scale(0.7) rotateZ(5deg);
+          transform: translateY(15px) scale(0.7) rotateZ(5deg);
+}
+
+@media screen and (min-width: 650px) {
+  .Container-content {
+    -webkit-transform: translateX(200px) scale(0.8);
+            transform: translateX(200px) scale(0.8);
+    -webkit-transition: .3s .1s;
+    transition: .3s .1s;
+  }
+  .Container-figure {
+    -webkit-transform: translate(0, 15px) scale(0.8) rotateZ(5deg);
+            transform: translate(0, 15px) scale(0.8) rotateZ(5deg);
+    -webkit-transition: .3s ease-out;
+    transition: .3s ease-out;
+  }
+  .Container:hover {
+    padding: 3em;
+  }
+  .Container:hover .Container-content {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transition: .3s .4s;
+    transition: .3s .4s;
+  }
+  .Container:hover .Container-figure {
+    -webkit-transform: translate(220px, 15px) scale(1) rotateZ(5deg);
+            transform: translate(220px, 15px) scale(1) rotateZ(5deg);
+  }
+}
+/*# sourceMappingURL=style.css.map */

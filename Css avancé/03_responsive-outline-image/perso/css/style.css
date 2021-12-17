@@ -1,0 +1,95 @@
+body {
+  background-color: beige;
+  font-family: Poppins, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+img {
+  width: 230px;
+}
+
+.Card {
+  box-shadow: 5px 15px 25px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  background: linear-gradient(-45deg, #ece74e, #8FB244);
+  position: relative;
+  border-radius: 50px;
+  min-height: 300px;
+}
+.Card-content {
+  transition: 0.6s ease-in;
+  margin-right: 10px;
+  margin-left: 10px;
+  opacity: 0;
+}
+.Card-content-title {
+  font-size: 40px;
+  color: whitesmoke;
+}
+.Card-content > p {
+  font-size: small;
+  color: whitesmoke;
+}
+.Card-content-button {
+  border: none;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 15px;
+  color: #B3C748;
+}
+.Card-content-button:hover {
+  background-color: #8FB244;
+  color: whitesmoke;
+}
+.Card-image {
+  position: absolute;
+  transition: 0.6s ease-in;
+  bottom: -30px;
+}
+.Card:hover {
+  height: 600px;
+}
+.Card:hover .Card-content {
+  opacity: 1;
+}
+.Card:hover .Card-image {
+  transform: translateY(0px) rotateZ(150deg);
+  transition: 0.6s ease-in;
+}
+
+@media screen and (min-width: 650px) {
+  .Card-content {
+    transform: translateX(250px) scale(0);
+    transition: 0.6s ease-in;
+    opacity: 0;
+  }
+  .Card-image {
+    transition: 0.6s ease-in;
+  }
+  .Card:hover {
+    height: 300px;
+  }
+  .Card:hover .Card-content {
+    transform: translateX(0px);
+    transition: 0.8s ease-in-out;
+  }
+  .Card:hover .Card-image {
+    transform: translateX(250px) rotate(150deg) scale(1.1);
+    transition: 0.8s ease-in-out;
+  }
+}
+section::after {
+  content: url(../img/flaque.png);
+  position: absolute;
+  opacity: 0;
+  transform: scale(0);
+  transition: 0.5s ease-in;
+}
+
+section:hover::after {
+  opacity: 1;
+  transform: scale(1);
+}/*# sourceMappingURL=style.css.map */

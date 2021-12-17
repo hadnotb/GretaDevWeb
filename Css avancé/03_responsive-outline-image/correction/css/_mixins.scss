@@ -1,0 +1,18 @@
+@mixin XYcenteredBlock{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin XYcenteredFullHeightBlock{
+    @include XYcenteredBlock;
+    min-height: 100vh;
+}
+
+$bgDarkColor:black;
+$bgColor:#666;
+$bgLightColor:#aaa;
+$white:white;
+$color1:#F00100 ;
+$color2: #ece74e;
+$color3: #8FB244;
+$color4: #2a8108;

@@ -1,0 +1,92 @@
+body {
+  background: linear-gradient(45deg, #ffaf00, #bb02ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.Section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-wrap: wrap;
+}
+.Section-article {
+  box-sizing: border-box;
+  background-color: white;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+  border-radius: 15%;
+  box-shadow: 10px 5px 5px rgba(55, 55, 56, 0.336);
+  padding: 20px;
+  min-height: 450px;
+  overflow: hidden;
+  position: relative;
+}
+.Section-article::before {
+  content: "";
+  top: -350px;
+  border-radius: 1000px;
+  position: absolute;
+  width: 500px;
+  height: 500px;
+}
+.Section-article:nth-child(1)::before {
+  background-color: #FFAF00;
+}
+.Section-article:nth-child(1) .Article-button {
+  background-color: #FFAF00;
+}
+.Section-article:nth-child(2)::before {
+  background-color: #DA2268;
+}
+.Section-article:nth-child(2) .Article-button {
+  background-color: #DA2268;
+}
+.Section-article:nth-child(3)::before {
+  background-color: #BB02FF;
+}
+.Section-article:nth-child(3) .Article-button {
+  background-color: #BB02FF;
+}
+
+.Section:hover .Article {
+  filter: blur(6px);
+  transition: all 0.3s ease-out;
+}
+.Section:hover .Article:hover {
+  filter: blur(0);
+}
+
+h1 {
+  font-size: 60px;
+  margin: 0;
+}
+
+p {
+  text-align: center;
+}
+
+.Article-title {
+  z-index: 1;
+}
+.Article-button {
+  display: block;
+  text-decoration: none;
+  font-size: 17px;
+  border: none;
+  padding: 17px 15px;
+  border-radius: 35px;
+  margin-right: auto;
+  margin-left: auto;
+  transition: all 0.3s ease-out;
+}
+.Article-button:hover {
+  transform: scale(1.1);
+}/*# sourceMappingURL=style.css.map */

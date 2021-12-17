@@ -1,0 +1,47 @@
+<main class="MainContent">
+
+    <section class="MainContent-article Article">
+
+            <figure class="Article-mainPic">
+                <img class="Article-mainPic-img" src="<?php echo(IMAGE_URL . '/' . $images[0]); ?>" alt="">
+            </figure>
+
+            <figure class="Article-vigPic">
+                <?php foreach($images as $image):?>
+                    <img class='Article-vigPic-img' src="<?php echo(IMAGE_URL . '/' . $image); ?>" alt="" class="Article-vigPic-img">
+                <?php endforeach ?>
+            </figure>
+
+            <section class="Article-info">
+
+                <h1 class="Article-info-nomModel"><?=$article['libModel']?></h1>
+
+                <div class="Article-info-couleur">
+                    <h2 class="Article-info-couleur-h2">Couleur</h2>
+                    <div class="Article-info-couleur-container">
+                        <?php foreach($couleur as $couleurItem):?>
+                            <div class="Article-info-couleur-item" style="background:<?= $couleurItem?>; width:25px; height:25px;"></div>
+                        <?php endforeach ?>
+                    </div>
+                </div>
+
+                <div class="Article-info-taille">
+                    <h2 class="Article-info-taille-h2">Taille</h2>
+                    <div class="Article-info-taille-container">
+                        <?php foreach($taille as $tailleItem):?>
+                            <p class="Article-info-taille-item"><?= $tailleItem?></p>
+                        <?php endforeach ?>
+                    </div>
+                </div>
+
+                <div class="Article-info-description">
+                    <h2 class="Article-info-description-h2">Description</h2>
+                    <p><?=$article['details']?></p>
+                </div>
+
+                <Button class="Article-info-bouton">Ajouter au panier</Button>
+
+            </section>
+
+    </section>
+</main>

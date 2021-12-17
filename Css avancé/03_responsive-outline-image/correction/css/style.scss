@@ -1,0 +1,87 @@
+@import 'mixins';
+body{
+    @include XYcenteredFullHeightBlock;
+    font-family: Poppins, sans-serif;
+}
+.Container{
+    background: linear-gradient(-45deg,$color2,$color3);
+    border-radius: 50px;
+    position:relative;
+    padding:3em;
+    max-width:400px;
+    transition:.5s ease-out;
+    &-content{
+        color:white;
+        opacity:0;
+        transition: .3s ease-out .4s;
+        &-h2{
+            font-size: 3em;
+        }
+        &-text-link:link{
+            display:inline-block;
+            padding:.7em;
+            background-color:#ffffff ;
+            color:$color3;
+            border-radius: 20px;
+            text-decoration: none;
+            transition:.3s .1s;
+        }
+        &-text-link:hover{
+            background-color:$color3;
+            color:#ffffff ;
+        }
+
+    }
+    &-figure{
+        position: absolute;
+        bottom:0px;
+        margin:0;
+        padding:0;
+        transform-origin: center bottom;
+        transform:translateY(15px) scale(1) rotateZ(5deg);
+        transition:.3s;
+    }
+    &:hover{
+        padding-bottom:400px;
+        .Container-content{
+            opacity: 1;
+        }
+        .Container-figure{
+            transform:translateY(15px) scale(.7) rotateZ(5deg);
+
+        }
+    }
+
+}
+// ###############################################
+// ##############  MIN WIDTH : 650px ###################
+// ###############################################
+
+
+@media screen AND (min-width:650px){
+    .Container{
+        &-content{
+            transform: translateX(200px) scale(.8);
+            transition:.3s .1s;
+        }
+        &-figure{
+            transform:translate(0, 15px) scale(.8) rotateZ(5deg);
+            transition: .3s ease-out;
+        }
+        &:hover{
+            padding:3em;
+            .Container-content{
+                transform: translateX(0);
+                transition:.3s .4s;
+
+            }
+            .Container-figure{
+                transform:translate(220px, 15px) scale(1) rotateZ(5deg);
+            }
+        }
+        
+
+    
+    }
+
+}// fin de query
