@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Administration{% endblock %}
+
+{% block custom_css %}
+    <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
+{% endblock %}
+
+{% block nav %}
+    {% include 'admin/partials/_navbar.html.twig' %}
+{% endblock %}

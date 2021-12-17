@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ parent() }} - {{ product.name }} {% endblock %}
+
+{% block body %}
+
+	<h2 class="mt-3">{{ product.name }}</h2>
+	<div class="row">
+		<div class="col-8">
+			<div class="card">
+				<img src="{{ asset_upload(product.thumbnail) }}" alt="" class="img-fluid">
+				<div class="card-body">
+					<span class="badge rounded-pill bg-info">{{ product.category.name }}</span>
+					<h4>{{ product.price|format_price }}</h4>
+					<div class="card-text">{{ product.description }}</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<h2 class="mt-3">Donnez votre avis</h2>
+
+	{% if app.user %}
+		<div class="row">
+			<div class="col-4">
+				{{ form_start(reviewForm, {'attr':{'novalidate':'novalidate'}}) }}
+				{{ form_widget(reviewForm) }}
+				<button class="btn btn-primary" type="submit">Enregistrer</button>
+				{{ form_end(reviewForm) }}
+			</div>
+		</div>
+	{% else %}
+		<p>Pour ajouter un avis vous devez <a href="{{ path('security_login') }}">vous connecter</a> ou <a href="#">créer un compte</a></p>
+	{% endif %}
+
+	<h2 class="mt-3">Ce qu'en pensent les internautes</h2>
+	<div class="row">
+		<div class="col-8">
+			{% if product.reviews|length > 0 %}
+				{# {% for review in product.reviews %} #}
+				{# {% for review in product.getValidReviews() %} #}
+				{% for review in validReviews %}
+					<div>
+						<h3>{{ review.nickname }}</h3>
+						<h4>Note : {{ review.grade }}/5</h4>
+						<em>Ajouté le {{ review.createdAt|date('d/m/Y à H:i') }}</em>
+						<p>{{ review.content }}</p>
+						
+						{% if app.user %}
+							<nav>
+								{# Si l'utilisateur connecté peut signaler l'avis, on affiche le bouton de signalement #}
+								{% if app.user.canReport(review) %}
+									<a class="btn btn-danger btn-sm" href="{{ path('product_review_reports', {'slug':product.slug, 'id':review.id}) }}" title="Signaler cet avis">
+										<i class="fas fa-skull-crossbones"></i>
+									</a>
+								{% endif %}
+
+								{# Si l'utilisateurconnecté peut supprimer son signalement, on affiche le bouton pour le faire #}
+								{% if app.user.canUnreport(review) %}
+									<a class="btn btn-primary btn-sm" href="{{ path('product_review_unreports', {'slug':product.slug, 'id':review.id}) }}" title="Supprimer mon signalement">
+										<i class="fas fa-check-circle"></i>
+									</a>
+								{% endif %}
+
+								{% if is_granted(constant('App\\Security\\Voter\\ReviewVoter::DELETE'), review) %}
+									<a class="btn btn-danger btn-sm" href="{{ path('product_review_delete', {'slug':product.slug, 'id':review.id}) }}" title="Supprimer cet avis">
+										<i class="far fa-trash-alt"></i>
+									</a>
+								{% endif %}
+							</nav>
+						{% endif %}
+					</div>
+				{% endfor %}
+			{% else %} 
+				<p>Soyez le premier à donner votre avis sur ce produit !</p>
+			{% endif %}
+		</div>
+	</div>
+{% endblock %}
